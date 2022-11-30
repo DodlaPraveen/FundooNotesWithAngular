@@ -1,0 +1,52 @@
+.container{
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid #dadce0;
+    border-radius: 8px;    
+
+    position:absolute;
+    width:760px;
+    padding-left: 40px;
+    padding-top:48px;
+    padding-right: 40px;
+    padding-bottom: 36px;
+    margin-left: 28%;
+    margin-top: 2%;
+}
+.line2{
+   
+    font-family: 'Google Sans','Noto Sans Myanmar UI',arial,sans-serif;
+}
+.logo{
+    margin-left: 50px;
+    height: 50%;
+}
+.img-caption{
+    font-weight: lighter;
+    font-size: 18px;
+    margin-left: 50px;
+}
+.button1{
+    color: #1a73e8;
+}
+.button2{
+    background-color: #1a73e8;
+    color: white;
+}
+.a-class{
+    color:#1a73e8;
+    font-weight: 500;
+    margin-top:28px;
+    font-size: 16px;
+    padding-top: 28px;
+}
+@media only screen and (max-width: 599px) {
+    .container{
+        border:none;
+        padding: 4%;
+    }
+
+    .button-section{
+        margin-top: 10%;
+    }
+}
