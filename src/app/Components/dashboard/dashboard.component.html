@@ -1,0 +1,71 @@
+<div class="example-container">
+    <mat-toolbar class="example-toolbar">
+        <button mat-icon-button>
+            <mat-icon>menu</mat-icon>
+        </button>
+        <div class="keepimage">
+            <img type="image" src="https://www.gstatic.com/images/branding/product/1x/keep_2020q4_48dp.png"
+                height="40px" width="40px">
+        </div>
+        <h1 class="example-app-name">Fundoo</h1>
+        <div class="nosubmit">
+            <input class="nosubmit" type="search" placeholder="Search...">
+        </div>
+        <div class="cyDiv">
+            <div>
+                <img type="image" src="../../../assets/refresh_FILL0_wght400_GRAD0_opsz48.svg" height="26px"
+                    width="26px">
+            </div>
+            <div>
+                <img type="image" src="../../../assets/view_stream_FILL0_wght400_GRAD0_opsz48.svg" height="26px"
+                    width="26px">
+            </div>
+            <div>
+                <img type="image" src="../../../assets/settings_FILL0_wght400_GRAD0_opsz48.svg" height="26px"
+                    width="26px">
+            </div>
+        </div>
+        <div class="appimage">
+            <img type="image" src="../../../assets/apps_FILL0_wght400_GRAD0_opsz48.svg" height="30px" width="30px">
+
+            <img type="image" src="../../../assets/account_circle_FILL0_wght400_GRAD0_opsz48.svg" height="28px"
+                width="28px" class="upper-icon">
+            <mat-menu #menu>
+                <button mat-menu-item>Logout</button>
+            </mat-menu>
+        </div>
+
+    </mat-toolbar>
+    <div class="menu">
+        <div class="note1">
+            <img type="image" src="../../../assets/lightbulb_black_24dp.svg" height="28px" width="28px">
+            <img type="image" src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48 (1).svg" height="28px"
+                width="28px">
+            <img type="image" src="../../../assets/edit_FILL0_wght400_GRAD0_opsz48.svg" height="28px" width="28px">
+            <img type="image" src="../../../assets/archive_black_24dp.svg" height="28px" width="28px">
+            <img type="image" src="../../../assets/delete_FILL0_wght400_GRAD0_opsz48.svg" height="28px" width="28px">
+
+
+
+        </div>
+        <mat-sidenav-container class="example-sidenav-container" >
+            <mat-sidenav >
+                <mat-nav-list>
+
+                    <mat-list role="list" class="hide">
+                        <mat-list-item role="listitem" >Notes</mat-list-item>
+                        <mat-list-item role="listitem">reminder</mat-list-item>
+                        <mat-list-item role="listitem">edit</mat-list-item>
+                        <mat-list-item role="listitem" >archive</mat-list-item>
+                        <mat-list-item role="listitem" >trash</mat-list-item>
+                    </mat-list>
+
+                </mat-nav-list>
+            </mat-sidenav>
+            <mat-sidenav-content>
+                <router-outlet></router-outlet>
+            </mat-sidenav-content>
+
+        </mat-sidenav-container>
+    </div>
+</div>

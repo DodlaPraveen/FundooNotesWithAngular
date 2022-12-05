@@ -12,6 +12,19 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { MatInputModule } from '@angular/material/input';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import { CreateNoteComponent } from './Components/create-note/create-note.component';
+import { GetAllNoteComponent } from './Components/get-all-note/get-all-note.component';
+import { DisplayNoteComponent } from './Components/display-note/display-note.component';
+import { IconsComponent } from './Components/icons/icons.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatMenuModule} from '@angular/material/menu';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatListModule} from '@angular/material/list';
+
+
 
 @NgModule({
   declarations: [
@@ -20,6 +33,11 @@ import { ReactiveFormsModule } from '@angular/forms';
     LoginComponent,
     ForgetPasswordComponent,
     ResetPasswordComponent,
+    DashboardComponent,
+    CreateNoteComponent,
+    GetAllNoteComponent,
+    DisplayNoteComponent,
+    IconsComponent,
    
     
   ],
@@ -30,7 +48,14 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatFormFieldModule,
     MatCheckboxModule,
     MatInputModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    MatToolbarModule,
+    MatMenuModule,
+    MatIconModule,
+    MatSidenavModule,
+    MatListModule
+    
 
     
   ],

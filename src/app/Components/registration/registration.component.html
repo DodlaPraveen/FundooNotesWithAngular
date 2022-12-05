@@ -1,5 +1,5 @@
-<div class="Container main" fxLayout="row" fxLayoutAlign="space-evenly center">
-    <div class="left-side" fxLayout="column" fxLayoutAlign="center">
+<div class="Container main" >
+    <div class="left-side" >
         <div class="Logo-name">
             <h1>
                 <span style="color: blue;">F</span>
@@ -14,7 +14,7 @@
         <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
             <div class="creadentials">
 
-                <div class="full_name" fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="20px">
+                <div class="full_name" >
                     <mat-form-field appearance="outline">
                         <mat-label>First Name</mat-label>
                         <input matInput formControlName="firstName" placeholder="firstname">
@@ -29,9 +29,9 @@
                 </div>
 
             </div>
-            <div class="username" fxLayout="column" fxLayoutAlign=" stretch">
+            <div class="username" >
 
-                <mat-form-field appearance="outline" fxFlex.xs=100 style="width: 100%;">
+                <mat-form-field appearance="outline"  style="width: 100%;">
                     <mat-label>Email</mat-label>
                     <input matInput formControlName="email" placeholder="email">
                     <mat-error>Enter valid email</mat-error>
@@ -40,7 +40,7 @@
 
             </div>
             <a class="a-class">Use my current email address instead</a>
-            <div class="password-details" fxLayout="row" fxLayoutAlign="space-evenly center" fxLayoutGap="20px">
+            <div class="password-details" >
 
                 <mat-form-field appearance="outline" class="mat-form-field-paasword">
                     <mat-label>Password</mat-label>

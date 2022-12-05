@@ -1,1 +1,50 @@
-<p>login works!</p>
+<div class="section">
+    <div>
+        <div class="heading">
+            <h1 >
+                <span style="color: blue;">F</span>
+                <span style="color: red;">u</span>
+                <span style="color: Orange;">n</span>
+                <span style="color: blue;">d</span>
+                <span style="color: rgb(21, 255, 0);">o</span>
+                <span style="color: red;">o</span>
+            </h1>
+        </div>
+        <div class="title">
+            <h2>Sign in</h2>
+        </div>
+        <div class="title1">
+            <p>Use your Fundoo Account</p>
+        </div>
+        <form [formGroup]="signinForm" (ngSubmit)="onSubmit()">
+            <div class="Phoneoremail" >
+                <mat-form-field appearance="outline">
+                    <mat-label>Email or phone number</mat-label>
+                    <input type="text" formControlName="email" matInput placeholder="email">
+                    <mat-error>Enter a valid Email </mat-error>
+                </mat-form-field>
+            </div>
+            <div class="conformpassword">
+                <mat-form-field appearance="outline">
+                    <mat-label>password</mat-label>
+                    <input type="text" formControlName="password" matInput placeholder="password">
+                    <mat-error>Enter a valid password</mat-error>
+                </mat-form-field>
+            </div>
+            <div class="forgotemailbutton">
+                <button class="button">Forgot email?</button>
+            </div>
+            <div class="paragraph">
+                <p>Not your computer? Use Guest mode to sign in privately.</p>
+            </div>
+            <div class="learnmorebutton">
+                <button class="button2">Learn more</button>
+            </div>
+            
+            <div class="createaccountandnextbutton">
+                <button class="button3">Create Account</button>
+                <button  class="button4" >Next</button>
+            </div>
+        </form>
+    </div>
+</div>
