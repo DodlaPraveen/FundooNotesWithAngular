@@ -7,6 +7,9 @@
     left: 0;
     right: 0;
   }
+  .example-toolbar {
+    display: flex;
+  }
 
 .keepimage{
     margin-left: 1%;
@@ -48,6 +51,7 @@
     flex: 1;
     height: 550px;
     overflow-y: hidden;
+  ;
     
   }
   .hide{
@@ -76,11 +80,7 @@ margin-top: 2%;
     /* Make sure the toolbar will stay on top of the content as it scrolls past. */
     z-index: 2;
   }
-  .example-sidenav-container {
-    /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
-       causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
-    flex: 1;
-  }
+ 
   
   .example-is-mobile .example-sidenav-container {
     /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
@@ -123,4 +123,5 @@ margin-top: 2%;
     margin: 0px;
     cursor: pointer;
 }
+
  

@@ -1,0 +1,106 @@
+.OuterDiv {
+    width: 500px;
+  
+    margin:20px auto 5px auto;
+  }
+  
+  .InnerDiv {
+   // border: 1px solid rgb(186, 184, 184);
+    padding: 8px 20px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    box-shadow: 0 3px 3px 3px rgb(222, 222, 222);
+    cursor: pointer;
+  }
+  .search {
+    border: none;
+    outline: none;
+    width: 80%;
+    box-sizing: border-box;
+    resize: none;
+    font-weight: bold;
+    letter-spacing: .00625em;
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    text-decoration: center;
+    margin-bottom: 10px;
+  }  
+  
+  .mySearch {
+    border: none;
+      outline: none;
+    width: 80%;
+    box-sizing: border-box;
+      resize: none;
+      font-weight: bold;
+      letter-spacing: .00625em;
+      font-family: "Google Sans", Roboto, Arial, sans-serif;
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 1.5rem;
+      text-decoration: center;
+      margin-bottom: 10px;
+    margin-top: -4;
+  }
+  
+  // input:focus {
+  //     outline: none;
+  // }
+  .pin{
+    height: 25px;
+    width: 30px;
+    padding-bottom: 35px;
+    //margin-left: 70%;
+  }
+  
+  
+  .ic {
+   display: flex;
+    flex-direction:row;
+  
+  
+  
+  }
+  
+  .Images{
+  
+    align-items:baseline;
+    margin-bottom: -4%;
+   // justify-content: left;
+  
+    //justify-content: space-evenly;
+  
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: row;
+  white-space: 50px;  
+    
+  }
+  .close {
+    display: flex;
+    //align-items:flex-end;
+    padding: 8px 190px;
+    padding: 8px 70px;
+    margin-left: 28%;
+    
+  
+  }
+  .button1{
+   
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    background-color: transparent;
+    font-size: 14px;
+    letter-spacing: .0107142857em;
+    font-weight: 500;
+    text-transform: none;
+    cursor: pointer;
+    border: none;
+    //margin-top: 40%;
+  
+  }
+  .add{
+    display: flex;
+    direction: row;
+  }
