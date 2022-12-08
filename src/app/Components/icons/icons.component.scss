@@ -1,0 +1,59 @@
+.OuterDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding:5%;
+   // width: 2px;
+
+}
+.add{
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border: 10px;
+  //  margin: 0 5px;
+    .material-symbols-outlined{
+        padding: 10px;
+    }
+    .divImg{
+        display: flex;
+        width: 20px;
+        height: 20px;
+    }
+    cursor: pointer;
+    :hover{
+        border-radius: 50%;
+        background-color: #f1f3f4;
+    }
+}
+.icons{
+    height: 20px;
+}
+//.colors{
+   
+
+//}
+
+.color{
+    height: 40px;
+    width: 50px;
+    //border: 0 blue;
+    display: flex;
+    justify-content: space-around;
+    padding-left: 12px;
+   border-radius: 200px;
+
+}
+.restore{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 1px;
+    margin-left: 250px;
+}
+.restore button{
+    margin-right: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}

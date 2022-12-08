@@ -14,10 +14,13 @@ export class HttpService {
     return this.httpclient.post(this.baseurl+url, reqdata, token && httpoptions)
 
   }
-  getService(){
-
+  getService(url:string,token:boolean=false,httpoptions:any){
+    return this.httpclient.get(this.baseurl+url, token && httpoptions)
   }
-  putService(){
+
+  putService(url:string,reqdata:any,token:boolean=false,httpoptions:any){
+    return this.httpclient.put(this.baseurl+url, reqdata, token && httpoptions)
+   
 
   }
   deleteService(){

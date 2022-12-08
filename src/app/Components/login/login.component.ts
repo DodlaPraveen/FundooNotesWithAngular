@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UsersService } from 'src/app/services/userservices/users.service';
 @Component({
   selector: 'app-login',
@@ -10,7 +11,7 @@ export class LoginComponent  {
   signinForm!: FormGroup;
   submitted = false;
 
-  constructor(private formBuilder: FormBuilder, private user : UsersService) { }
+  constructor(private formBuilder: FormBuilder, private user : UsersService, private router : Router) { }
   ngOnInit(): void {
     this.signinForm = this.formBuilder.group({
       email: ['', [Validators.required, Validators.email]],
@@ -24,11 +25,13 @@ export class LoginComponent  {
       let payload = {
         email: this.signinForm.value.email,
         password: this.signinForm.value.password,
-        service: "advance"
+        
       }
       this.user.login(payload).subscribe((response:any)=>
       {
         console.log("Signin successfully",response)
+        localStorage.setItem('token', response.data)
+        this.router.navigateByUrl('/dashboard/note')
       })
 
     }

@@ -22,7 +22,7 @@ return this.httpservice.postService('/User/Register', payload, false, header)
 
   login(payload:any){
     let header={
-      Headers:new HttpHeaders({
+      headers:new HttpHeaders({
         'Content-Type': 'application/json'
       })
     }
