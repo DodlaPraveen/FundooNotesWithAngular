@@ -7,6 +7,7 @@ import { NoteService } from 'src/app/services/noteservices/note.service';
   styleUrls: ['./get-all-note.component.scss']
 })
 export class GetAllNoteComponent {
+  
   noteArray: any;
   msg: any;
   constructor(private note: NoteService) { }
@@ -19,5 +20,10 @@ export class GetAllNoteComponent {
       this.noteArray = request
       console.log("request data", this.noteArray)
     })
+
+  }
+  receiveMsgfromDisplay($event:any){
+    console.log("inside display to get all notes",$event)
+    this.getallnotes();
   }
 }

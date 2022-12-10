@@ -1,19 +1,19 @@
 <div fxLayout="row wrap" fxLayoutGap="10px grid" style="padding-top: 2%; padding-left: 10%;">
 
-    <div class="notes" >
+    <div class="notes" *ngFor="let note of NoteList">
 
 
         <div appearance="fill" class="discard">
             <mat-card class="card" >
 
                 <img class="pin" src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg">
-                <mat-card-title >
-                    
+                <mat-card-title  (click)="openDialog(note)">
+                    {{note.title}}
                 </mat-card-title>
 
 
                 <mat-card-content>
-                    
+                    <p  (click)="openDialog(note)">{{note.note}}</p>
                 </mat-card-content>
 
 

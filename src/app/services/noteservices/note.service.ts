@@ -28,9 +28,7 @@ export class NoteService {
   getall(){
     this.token=localStorage.getItem('token')
     console.log(this.token)
-
-
-
+    
     let header={
       headers:new HttpHeaders({
         'Content-Type': 'application/json',
