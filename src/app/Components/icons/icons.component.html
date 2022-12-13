@@ -34,7 +34,7 @@
      <div class="MoreItem" mat-icon-button matTooltip="More" [matMenuTriggerFor]="menu">
             <img class="divImg" src="../../../assets/more_vert_black_24dp.svg">
             <mat-menu #menu="matMenu">
-                <button mat-menu-item class="matmenuBtn" >Delete note</button>
+                <button mat-menu-item class="matmenuBtn" (click)="trash()">Delete note</button>
                 <button mat-menu-item>Add label</button>
                 <button mat-menu-item>Add drawing</button>
                 <button mat-menu-item>make a copy</button>
