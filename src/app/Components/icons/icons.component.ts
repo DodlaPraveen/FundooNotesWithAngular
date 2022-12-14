@@ -1,3 +1,4 @@
+
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { NoteService } from 'src/app/services/noteservices/note.service';
 
@@ -8,21 +9,35 @@ import { NoteService } from 'src/app/services/noteservices/note.service';
 })
 export class IconsComponent {
   @Input() notecard:any;
-  
   data:any;
-  noteID:any;
-  constructor() {  }
+  
+  
+
+  constructor(private note : NoteService) {  }
   
  trash(){
   let req={
-    NotesId:[this.notecard.noteID],
-    Trash:true,
+    noteID:[this.notecard.noteID],
+    isTrash:true,
 
   }
   console.log(req)
+  this.note.trashnote(req).subscribe((response: any) => {
+    console.log(response);
+    
+  })
  }
-
-
+ archive(){
+  let req={
+    noteID:[this.notecard.noteID],
+   isArchive:true,
+  }
+  console.log(req)
+  this.note.Archive(req).subscribe((response:any)=>{
+    console.log(response)
+  
+  })
+ }
 
 
 }

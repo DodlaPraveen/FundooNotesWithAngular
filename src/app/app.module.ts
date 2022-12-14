@@ -26,6 +26,8 @@ import {MatListModule} from '@angular/material/list';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatCardModule} from '@angular/material/card';
+import { UpdatenoteComponent } from './Components/updatenote/updatenote.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -40,6 +42,7 @@ import {MatCardModule} from '@angular/material/card';
     GetAllNoteComponent,
     DisplayNoteComponent,
     IconsComponent,
+    UpdatenoteComponent,
    
     
   ],
@@ -59,7 +62,8 @@ import {MatCardModule} from '@angular/material/card';
     MatListModule,
     FlexLayoutModule,
     MatDialogModule,
-    MatCardModule
+    MatCardModule,
+    FormsModule
     
 
     

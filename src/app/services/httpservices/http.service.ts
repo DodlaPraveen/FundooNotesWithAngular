@@ -20,9 +20,6 @@ export class HttpService {
 
   putService(url:string,reqdata:any,token:boolean=false,httpoptions:any){
     return this.httpclient.put(this.baseurl+url, reqdata, token && httpoptions)
-   
-   
-
   }
   deleteService(){
 

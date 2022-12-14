@@ -1,0 +1,17 @@
+<div class="input">
+    <div class="note">
+
+        <div  class="mat-title" fxLayout="row" fxLayoutAlign="space-between center">
+            <input matInput [(ngModel)]="title" placeholder="Title" >
+        </div>
+
+        <div class="mat-title" fxLayout="row" fxLayoutAlign="space-between center">
+            <input matInput  [(ngModel)]="description" placeholder="Description">
+        </div>
+        <app-icons></app-icons>
+        <div class="app">
+            <button mat-button class="button" (click)="closeDialog()">close</button>
+        </div>
+       
+    </div>
+</div>

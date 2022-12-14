@@ -3,14 +3,15 @@
         <div appearance="fill" class="discard">
             <mat-card class="card" >
                 <img class="pin" src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg">
-                <mat-card-title >
+                <mat-card-title  (click)="openDialog(note)">
                     {{note.title}}
                 </mat-card-title>
-                <mat-card-content>
-                    <p>{{note.note}}</p>
+                <mat-card-content >
+                    <p (click)="openDialog(note)">{{note.note}}</p>
+                   
                 </mat-card-content>
                 <div class="icondiv" FxLayoutAlign="space-between centre">
-                    <app-icons [notecard]="note"></app-icons>
+                    <app-icons [notecard]="note" ></app-icons>
                 </div>
             </mat-card>
         </div>

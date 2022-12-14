@@ -38,7 +38,41 @@ export class NoteService {
     return this.http.getService(`/Notes/AllNotes`,true,header)
 
   }
+  trashnote(req:any){
+    console.log(req)
+    let header={
+
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' +this.token
+
+      })
+    }
+    return this.http.putService(`/Notes/Trash?noteid=${req.noteID}`,req,true,header)
+  }
+  Archive(req:any){
+    console.log(req)
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' +this.token
   
+      })
+    }
+    return this.http.putService(`/Notes/Archive?noteid=${req.noteID}`,req,true,header)
+  
+  }
+  updatenote(data:any){
+    console.log(data)
+    let header={
+      headers:new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' +this.token
+
+      })
+    }
+    return this.http.putService(`/Notes/Update?noteid=${data.noteId}`,data,true,header)
+  }
 
 
 
