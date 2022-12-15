@@ -18,6 +18,11 @@ export class GetAllNoteComponent {
       console.log("request data", request)
       this.noteArray = request
       console.log("request data", this.noteArray)
+      this.noteArray= this.noteArray.reverse()
+   this.noteArray= this.noteArray.filter((notedata:any)=>{
+    return notedata.isTrash == false && notedata.isArchive == false;
+    
+   })
     })
 
   }

@@ -56,11 +56,11 @@
                 fixedTopGap="56">
                 <mat-nav-list>
                     <mat-list role="list" class="hide">
-                        <mat-list-item role="listitem">Notes</mat-list-item>
+                        <mat-list-item role="listitem" (click)="Notes()">Notes</mat-list-item>
                         <mat-list-item role="listitem">reminder</mat-list-item>
                         <mat-list-item role="listitem">edit</mat-list-item>
-                        <mat-list-item role="listitem">archive</mat-list-item>
-                        <mat-list-item role="listitem">trash</mat-list-item>
+                        <mat-list-item role="listitem" (click)="archiveopen()">archive</mat-list-item>
+                        <mat-list-item role="listitem" (click)="trashopen()">trash</mat-list-item>
                     </mat-list>
                 </mat-nav-list>
             </mat-sidenav>
