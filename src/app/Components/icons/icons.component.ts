@@ -38,6 +38,33 @@ export class IconsComponent {
   
   })
  }
+ colors: Array<any>=[
+  {code:'#fff',name:"white"},
+  {code:'#f28b82',name:"red"},
+  {code:'#fbbc04',name:"orange"},
+  {code:'#ffff00',name:"yellow"},
+  {code:'#ccff90',name:"green"},
+  {code:'#a7ffeb',name:"teal"},
+  {code:'#cbf0f8',name:"blue"},
+  {code:'#aecbfa',name:"darkblue"},
+  {code:'#d7aefb',name:"purple"},
+  {code:'#e6c9a8',name:"brown"},
+  
+
+]
+setcolor(color:any){
+  
+ 
+  this.notecard.color=color
+  let data={
+    color:color,
+    noteID:[this.notecard.noteID],
+  }
+  console.log(data);
+  this.note.changecColor(data).subscribe((response:any)=>{
+    console.log(response);
+  })
+}
 
 
 }

@@ -15,9 +15,8 @@
             <img class="divImg" src="../../../assets//palette_black_24dp.svg">
             <mat-menu #colormenu="matMenu" fxLayout="row " fxLayoutAlign="start space-between">
                 <div  fxLayout="row wrap" fxLayoutAlign="start center">
-                    <div  >
-                        <button class="color" mat-mini-fab  
-                            ></button>
+                    <div *ngFor="let color of colors"  >
+                        <button class="color" mat-mini-fab (click)="setcolor(color.name)" [style.background]="color.name"></button>
                     </div>
                 </div>
             </mat-menu>

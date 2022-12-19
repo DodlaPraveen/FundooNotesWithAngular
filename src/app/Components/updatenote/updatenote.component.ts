@@ -13,6 +13,7 @@ export class UpdatenoteComponent {
   
   id: any;
   description: any;
+  color: any;
 
 
   constructor(private note: NoteService,
@@ -21,6 +22,7 @@ export class UpdatenoteComponent {
     this.title = data.title;
       this.description = data.note;
       this.id = data.noteID;
+      this.color = data.color
   }
   onNoClick(): void {
     this.dialogRef.close();
@@ -32,7 +34,7 @@ export class UpdatenoteComponent {
     let data = {
       title: this.title,
       note: this.description,
-      noteId: this.id
+      noteID: this.id
     }
     console.log(data)
     this.note.updatenote(data).subscribe((response: any) => {

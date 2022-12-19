@@ -1,5 +1,6 @@
 import { createComponent, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AuthenticationGuard } from './authentication.guard';
 import { ArchiveComponent } from './Components/archive/archive.component';
 import { CreateNoteComponent } from './Components/create-note/create-note.component';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
@@ -12,10 +13,11 @@ import { TrashComponent } from './Components/trash/trash.component';
 
 const routes: Routes = [
   {path : 'register' , component:RegistrationComponent},
+  { path: '', redirectTo: "/login", pathMatch: 'full' },
   {path : 'login' , component:LoginComponent},
   {path: 'forget' , component:ForgetPasswordComponent},
   {path: 'reset' , component:ResetPasswordComponent},
-  {path:'dashboard' , component:DashboardComponent,
+  {path:'dashboard' , component:DashboardComponent,canActivate:[AuthenticationGuard],
 children:[
   {path:'note' , component:GetAllNoteComponent},
   
