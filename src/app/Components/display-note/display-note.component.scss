@@ -11,15 +11,18 @@
 }
 .card{
 
-    width:250px;
-    max-height:200px;
-    margin:25px auto 16px auto;
-    border: 1px solid rgb(186, 184, 184);
-  //  padding: 20px 15px 10px 20px;
-    border-radius: 8px;
-    box-sizing: border-box;
-  //  box-shadow: 0 3px 3px 3px rgb(222, 222, 222);
-  font-size: medium;
+    display       : flex;
+  flex-direction: column;
+  height        : fit-content;
+  width         : 250px;
+  min-height    : 125px;
+  max-height    : 750px;
+  padding       : 16px 16px 8px;
+  border        : 1px solid transparent;
+  border-radius : 9px;
+  border-width  : 1px;
+  margin-bottom : 25px;
+  padding-top: 12px;
 }
 .icondiv{
     width:10px;
@@ -49,7 +52,21 @@
     margin-left: 90%;
     margin-top: 5%;
 }
+.pin:hover .icondiv{
+    width:10px;
+    visibility: visible;
+ }
 
 .notes:hover{
     box-shadow: 0.5px 0.5px 0.5px 0.5px rgba(157, 167, 170, 0.215);
 }
+.textArea {
+    word-wrap    : break-word;
+    overflow     : hidden;
+    text-overflow: ellipsis;
+    letter-spacing: .00625em;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }

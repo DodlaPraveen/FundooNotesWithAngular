@@ -9,7 +9,11 @@ import { NoteService } from 'src/app/services/noteservices/note.service';
 })
 export class IconsComponent {
   @Input() notecard:any;
+  @Output() displaytoIcons = new EventEmitter<string>()
   data:any;
+  noteID:any
+ 
+  
   
   
 
@@ -24,6 +28,7 @@ export class IconsComponent {
   console.log(req)
   this.note.trashnote(req).subscribe((response: any) => {
     console.log(response);
+    this.displaytoIcons.emit(response);
     
   })
  }
@@ -35,6 +40,7 @@ export class IconsComponent {
   console.log(req)
   this.note.Archive(req).subscribe((response:any)=>{
     console.log(response)
+    this.displaytoIcons.emit(response);
   
   })
  }

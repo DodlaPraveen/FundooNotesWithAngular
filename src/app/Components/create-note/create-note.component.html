@@ -2,11 +2,11 @@
 
     <div class="InnerDiv">
         <form [formGroup]="createForm" (ngSubmit)="close()" >
-            <div  fxLayout="row" fxLayoutAlign="none end" *ngIf="Show">
+            <div   fxLayout="row" fxLayoutAlign="none end" *ngIf="Show">
                 <input class="search" formControlName="title" placeholder="Title">
                 <img class="pin" src="../../../assets/push_pin_FILL0_wght400_GRAD0_opsz48.svg">
             </div>
-            <div *ngIf="!Show || Show" (click)="isshow()" fxLayout="row" fxLayoutAlign="space-between center">
+            <div  *ngIf="!Show || Show" (click)="isshow()" fxLayout="row" fxLayoutAlign="space-between center">
                 <input class="mySearch" formControlName="description" placeholder="Take a note...">
                 <div class="img"  *ngIf="!Show">
                     <img src="../../../assets/check_box_black_24dp.svg">

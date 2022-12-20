@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NoteService } from 'src/app/services/noteservices/note.service';
 
@@ -8,6 +8,7 @@ import { NoteService } from 'src/app/services/noteservices/note.service';
   styleUrls: ['./create-note.component.scss']
 })
 export class CreateNoteComponent {
+  @Output() displaytoCreateNotes = new EventEmitter<string>();
   createForm!: FormGroup;
   panelOpenState = true;
   Show = false;
@@ -37,11 +38,16 @@ export class CreateNoteComponent {
       console.log(payload)
       this.note.addnote(payload).subscribe((response:any) =>{
         console.log("addnote succesfully", response)
+        this.displaytoCreateNotes.emit(response)
         localStorage.getItem('token')
+        this.createForm.value.title = "";
+        this.createForm.value.description = "";
       })
      
     }
   }
+  
+
   
 }
   
