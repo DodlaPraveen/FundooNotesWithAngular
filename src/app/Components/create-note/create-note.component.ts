@@ -40,8 +40,8 @@ export class CreateNoteComponent {
         console.log("addnote succesfully", response)
         this.displaytoCreateNotes.emit(response)
         localStorage.getItem('token')
-        this.createForm.value.title = "";
-        this.createForm.value.description = "";
+       this.title = "";
+        this.description = "";
       })
      
     }

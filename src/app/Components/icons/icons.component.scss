@@ -1,3 +1,9 @@
+.container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin: 0px;
+}
 .OuterDiv{
     display: flex;
     flex-direction: row;
@@ -56,4 +62,12 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+}
+.hello{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    margin: 0px;
+    width: 20px;
+    height: 20px;
 }

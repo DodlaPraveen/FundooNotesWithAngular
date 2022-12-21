@@ -1,45 +1,60 @@
 <div class="OuterDiv">
 
+    <div  role="button" class="container" *ngIf="!isDeleteCom">
+        <div role="button" class="add">
+            <img class="divImg" src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48 (1).svg">
+        </div>
+        <div role="button" class="add">
+            <img class="divImg" src="../../../assets/group_add_black_24dp.svg">
+        </div>
 
-    <div role="button" class="add">
-        <img class="divImg" src="../../../assets/notifications_FILL0_wght400_GRAD0_opsz48 (1).svg">
-    </div>
-    <div role="button" class="add">
-        <img class="divImg" src="../../../assets/group_add_black_24dp.svg">
-    </div>
-
-    <div role="button" class="add">
+        <div role="button" class="add" >
 
 
-        <div role="button" class="add" [matMenuTriggerFor]="colormenu">
-            <img class="divImg" src="../../../assets//palette_black_24dp.svg">
-            <mat-menu #colormenu="matMenu" fxLayout="row " fxLayoutAlign="start space-between">
-                <div  fxLayout="row wrap" fxLayoutAlign="start center">
-                    <div *ngFor="let color of colors"  >
-                        <button class="color" mat-mini-fab (click)="setcolor(color.name)" [style.background]="color.name"></button>
+            <div role="button" class="add" [matMenuTriggerFor]="colormenu">
+                <img class="divImg" src="../../../assets//palette_black_24dp.svg">
+                <mat-menu #colormenu="matMenu" fxLayout="row " fxLayoutAlign="start space-between">
+                    <div fxLayout="row wrap" fxLayoutAlign="start center">
+                        <div *ngFor="let color of colors">
+                            <button class="color" mat-mini-fab (click)="setcolor(color.name)"
+                                [style.background]="color.name"></button>
+                        </div>
                     </div>
-                </div>
-            </mat-menu>
+                </mat-menu>
+            </div>
+        </div>
+        <div role="button" class="add">
+            <img class="divImg" src="../../../assets/insert_photo_black_24dp.svg">
+        </div>
+        <div role="button" class="add" *ngIf="!isArchiveCom">
+            <img class="divImg" src="../../../assets/archive_black_24dp.svg" (click)="archive()">
+        </div>
+        
+        <div role="button" class="add" *ngIf="isArchiveCom">
+
+            <img class="divImg" src="../../../assets/unarchive_FILL0_wght400_GRAD0_opsz48(1).svg" (click)="unarchive()">
+
+        </div>
+
+        <div role="button" class="add">
+            <div class="MoreItem" mat-icon-button matTooltip="More" [matMenuTriggerFor]="menu">
+                <img class="divImg" src="../../../assets/more_vert_black_24dp.svg">
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item class="matmenuBtn" (click)="trash()">Delete note</button>
+                    <button mat-menu-item>Add label</button>
+                    <button mat-menu-item>Add drawing</button>
+                    <button mat-menu-item>make a copy</button>
+                    <button mat-menu-item>Show checkboxes</button>
+                    <button mat-menu-item>copy to google Docs</button>
+                </mat-menu>
+            </div>
+
         </div>
     </div>
-    <div role="button" class="add">
-        <img class="divImg" src="../../../assets/insert_photo_black_24dp.svg">
+    <div role="button" class="hello" *ngIf="isDeleteCom">
+        <img class="divImg" src="../../../assets/delete_forever_FILL0_wght400_GRAD0_opsz48(1).svg"
+            (click)="deleteNote()">
+        <img class="divImg" src="../../../assets/restore_from_trash_FILL0_wght400_GRAD0_opsz48.svg"
+            (click)="restoreNote()">
     </div>
-    <div role="button" class="add" >
-        <img class="divImg" src="../../../assets/archive_black_24dp.svg"  (click)="archive()">
-    </div>
-  
-    <div role="button" class="add">
-     <div class="MoreItem" mat-icon-button matTooltip="More" [matMenuTriggerFor]="menu">
-            <img class="divImg" src="../../../assets/more_vert_black_24dp.svg">
-            <mat-menu #menu="matMenu">
-                <button mat-menu-item class="matmenuBtn" (click)="trash()" >Delete note</button>
-                <button mat-menu-item>Add label</button>
-                <button mat-menu-item>Add drawing</button>
-                <button mat-menu-item>make a copy</button>
-                <button mat-menu-item>Show checkboxes</button>
-                <button mat-menu-item>copy to google Docs</button>
-            </mat-menu>
-        </div>
-    </div>
-</div>  
+</div>

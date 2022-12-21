@@ -7,6 +7,7 @@ import { HttpService } from '../httpservices/http.service';
 })
 export class NoteService {
   token:any;
+ 
   constructor(private http:HttpService) {
     
    }
@@ -84,6 +85,16 @@ export class NoteService {
       })
     }
     return this.http.putService(`/Notes/Color?noteid=${data.noteID}&color=${data.color}`,data,true,header)   
+
+  }
+  deleteForeverService(data:any){
+    let header = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer ' + this.token
+      })
+    }
+    return this.http.deleteService(`/Notes/Remove?noteid=${data.noteID}`, true, header)
 
   }
 

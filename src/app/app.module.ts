@@ -31,6 +31,7 @@ import { FormsModule } from '@angular/forms';
 import { TrashComponent } from './Components/trash/trash.component';
 import { ArchiveComponent } from './Components/archive/archive.component';
 import { AuthguradServicedService } from './services/authgurad-serviced.service';
+import { SearchpipePipe } from './seachPipe/searchpipe.pipe';
 
 
 @NgModule({
@@ -48,6 +49,7 @@ import { AuthguradServicedService } from './services/authgurad-serviced.service'
     UpdatenoteComponent,
     TrashComponent,
     ArchiveComponent,
+    SearchpipePipe,
    
     
   ],

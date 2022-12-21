@@ -6,5 +6,11 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class DataService {
 
-  
+  private searchData = new BehaviorSubject({ type:'',data:[]});
+  searchNote = this.searchData.asObservable()
+  changeData(message:any){
+    this.searchData.next(message)
+    // console.log("inside data service ===", message);
+    
+  }
 }

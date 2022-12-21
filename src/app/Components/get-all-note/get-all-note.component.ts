@@ -27,7 +27,7 @@ export class GetAllNoteComponent {
 
   }
   receiveMsgfromDisplay($event:any){
-    //console.log("inside display to get all notes",$event)
+    console.log("inside display to get all notes",$event)
     this.getallnotes();
   }
  

@@ -23,9 +23,13 @@ export class TrashComponent {
     console.log("request data", this.noteArray)
     this.noteArray=this.noteArray.reverse();
       this.noteArray=this.noteArray.filter((notedata:any)=>{
-        return notedata.isArchive==false;
+        return notedata.isTrash==true;
       })
     })
+  }
+  receiveMsgfromDisplay($event:any){
+  
+    this.TrashList();
   }
 
 }
